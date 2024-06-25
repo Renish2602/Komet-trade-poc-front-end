@@ -56,7 +56,7 @@ const Trade = () => {
     return (
         <>
             <div className="w-full rounded overflow-hidden shadow-lg bg-gray-100 p-5">
-                <div className="w-full flex flex-row justify-between gap-10">
+                <div className="w-full flex flex-col md:flex-row justify-between gap-10">
                     <div className="w-full bg-gray-300 p-3 min-h-40 h-auto">
                         <h1 className='text-xl text-white font-medium'>Your Trade Details</h1>
                         <textarea
