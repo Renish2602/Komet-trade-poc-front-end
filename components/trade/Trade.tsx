@@ -23,7 +23,7 @@ const Trade = () => {
 
         tradeSocket.on('trade', (data) => {
             if (data != null && data?.ticket != null) {
-                appendLogs('Displaying Trade Details :');
+                appendLogs(`Displaying Trade Details : ${data?.ticket}`);
                 setJsonString(data)
             }
         });
@@ -47,6 +47,8 @@ const Trade = () => {
 
     const handleClick = () => {
         const req = {};
+        const messagesData = messages.slice(0,2);
+        setMessages(messagesData);
         tradeSocket.emit('generateTrade', req);
     }
 
