@@ -49,6 +49,7 @@ const Trade = () => {
         const req = {};
         const messagesData = messages.slice(0,2);
         setMessages(messagesData);
+        setJsonString(null);
         tradeSocket.emit('generateTrade', req);
     }
 
